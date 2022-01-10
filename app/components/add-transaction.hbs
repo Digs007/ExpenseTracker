@@ -1,0 +1,15 @@
+<h3>Add new transaction</h3>
+<form>
+    <div class="form-control">
+        <label for="text">Text</label>
+        <input required type="text" id="text" value={{this.text}} {{on "change" this.updateText}}
+            placeholder="Enter text..." />
+    </div>
+    <div class="form-control">
+        <label for="amount">Amount <br />
+            (negative - expense, positive - income)</label>
+        <input required type="number" id="amount" value={{this.amount}} {{on "change" this.updateAmount}}
+            placeholder="Enter amount..." />
+    </div>
+    <button type="button" class="btn" {{on "click" this.addTransaction}}>Add transaction</button>
+</form>

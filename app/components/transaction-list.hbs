@@ -1,0 +1,6 @@
+<h3>History</h3>
+<ul class="list">
+    {{#each this.tracker.transactions as |transaction|}}
+    <Transaction @transaction={{transaction}} />
+    {{/each}}
+</ul>

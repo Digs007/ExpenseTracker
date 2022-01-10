@@ -1,0 +1,11 @@
+{{#if (sign-check @transaction.amount)}}
+<li class='plus'>
+    {{@transaction.text}} <span>+{{money-formatter @transaction.amount}}</span>
+    <button type="button" {{on "click" (fn this.deleteTransaction @transaction)}} class="delete-btn">x</button>
+</li>
+{{else}}
+<li class='minus'>
+    {{@transaction.text}} <span>-{{money-formatter @transaction.amount}}</span>
+    <button type="button" {{on "click" (fn this.deleteTransaction @transaction)}} class="delete-btn">x</button>
+</li>
+{{/if}}
